@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dynamic Student Profile</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Enter Student Details</h2>
+    <form id="studentForm">
+      <input type="text" id="nameInput" placeholder="Full Name" required>
+      <input type="text" id="idInput" placeholder="Student ID" required>
+      <input type="email" id="emailInput" placeholder="Email" required>
+      <input type="text" id="majorInput" placeholder="Major" required>
+      <input type="text" id="yearInput" placeholder="Year" required>
+      <input type="url" id="photoInput" placeholder="Photo URL (optional)">
+      <button type="submit">Generate Card</button>
+    </form>
+  </div>
+
+  <div class="container">
+    <div class="card" id="studentCard">
+      <div class="front">
+        <img src="https://via.placeholder.com/150" alt="Student Photo" class="profile-img" id="profileImg">
+        <h2 id="name">Name</h2>
+        <p>ID: <span id="studentId">ID</span></p>
+        <p>Email: <span id="email">Email</span></p>
+        <button onclick="flipCard()">More Info</button>
+      </div>
+      <div class="back">
+        <h3>About</h3>
+        <p>Major: <span id="major">N/A</span></p>
+        <p>Year: <span id="year">N/A</span></p>
+        <canvas id="qr"></canvas>
+        <button onclick="flipCard()">Back</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
